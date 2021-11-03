@@ -185,7 +185,9 @@ exports.checkout = function (paths) {
 exports.undo = function (paths) {
 	return tfs(paths, 'undo /noprompt');
 };
-
+exports.checkoutRecursive = function (paths) {
+	return tfs(paths, 'checkout /recursive');
+};
 // Enumeration for visualStudioPath
 paths = {
 	vs2008: {
